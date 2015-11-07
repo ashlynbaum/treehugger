@@ -2,5 +2,5 @@
 <!-- loop through forest type names -->
 <!-- display your count of badges againgst total trees in forst count -->
 <% @badge_names.each do |badge_name| %>
-<p><%= "you've embraced #{instance_variable_get(badge_name).count} out of 10 trees from the #{badge_name.gsub!(/_/, ' ').gsub("badges","")} forest" %> </p>
+<p><%= "you've embraced #{instance_variable_get(badge_name).count} out of 10 trees from the #{badge_name.gsub!(/_/, ' ').gsub("badges","").gsub("@","")} forest" %> </p>
 <% end %>
