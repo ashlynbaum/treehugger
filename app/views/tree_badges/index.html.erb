@@ -1,14 +1,16 @@
-<h1> Tree Lovin' </h1>
-<!-- loop through forest type names -->
-<!-- display your count of badges againgst total trees in forst count -->
-<% @badge_names.each do |badge_name| %>
+<div class="forest-wrapper">
+  <h1> Tree Lovin' </h1>
+  <!-- loop through forest type names -->
+  <!-- display your count of badges againgst total trees in forst count -->
+  <% @badge_names.each do |badge_name| %>
 
 
-<%forest_name = badge_name.gsub(/_/, ' ').gsub("badges","").gsub("@","").split.map(&:capitalize).join(' ') %>
-<% forest = Forest.find_by(name: forest_name) %>
+  <%forest_name = badge_name.gsub(/_/, ' ').gsub("badges","").gsub("@","").split.map(&:capitalize).join(' ') %>
+  <% forest = Forest.find_by(name: forest_name) %>
 
-<p><%= "you've embraced #{instance_variable_get(badge_name).count} out of 10 trees from the"%>
-    <%= link_to(forest_name, forest_path(forest)) %>
-    forest
-</p>
-<% end %>
+  <p><%= "you've embraced #{instance_variable_get(badge_name).count} out of 10 trees from the"%>
+      <%= link_to(forest_name, forest_path(forest)) %>
+      forest
+  </p>
+  <% end %>
+</div>
