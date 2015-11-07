@@ -1,5 +1,4 @@
-class TreeBadgesController < ApplicationController
-
+class BadgesController < ApplicationController
   def index
     @user = current_user
     all_user_badges = TreeBadge.where(user_id: User.first) #TODO should be @user.id
@@ -14,4 +13,7 @@ class TreeBadgesController < ApplicationController
     end
   end
 
+  def new
+  	@badge = TreeBadge.new
+  end
 end

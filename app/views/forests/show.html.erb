@@ -1,9 +1,21 @@
-<h2><%= @forest.name %></h2>
-<div class="row">
-	<% @forest.trees.each do |tree| %>
-		<div class="col-md-2">
-			<div><%= tree.name %></div>
-			<div class="tree-tile"><img src="<%= tree.images %>" alt=""></div>
-		</div>
-	<% end %>
+<div class="forest-wrapper">
+	<h2><%= @forest.name %></h2>
+	<p><%= @forest.description %></p>
+	<div class="row">
+		<% @forest.trees.each do |tree| %>
+			<div>
+				<div class="tree-tile"><img src="<%= tree.images %>" alt="">
+					<h3 class="text-center"><%= tree.name %></h3>
+					<div class="text-center">
+						<%= button_to "Hug", class: "btn btn-success"  %>
+						<%= render "tree" %>
+						<%= form_for @badge do |f| %>
+							<%= f.url_feild :images %>
+						  <%= f.submit %>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
 </div>
