@@ -1,7 +1,16 @@
 <div class="forest-wrapper">
-	<h2><%= @forest.name %></h2>
-	<p><%= @forest.description %></p>
-	<div id="forest-tree" class="row">
-		<%= render @trees %>
-	</div>
+
+
+<% if @badges.count == 5 %>
+  <div id="badge-success" class="row">
+    <p>you have hugged all the trees!</p>
+  </div>
+<%  end  %>
+
+
+  <h2><%= @forest.name %></h2>
+  <p><%= @forest.description %></p>
+  <div id="forest-tree" class="row">
+    <%= render @trees %>
+  </div>
 </div>

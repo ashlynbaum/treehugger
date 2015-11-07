@@ -7,16 +7,25 @@
 
 
 
-<div id= "jumbo-description" class="jumbotron">
-  <h1 id="jumbo-header-text thirty-px-left">Hug </br>  Trees </br> Today</h1>
-  <p> It's time to connect with nature - literally. <br>
- Get to know our native species a little better.</p>
- <a class="btn btn-primary btn-lg" href= <%= forest_types_dashboards_path %> role="button">Find Forests Now</a>
+<div id= "jumbo-description" class="jumbotron text-center">
+  <!-- <h1 id="jumbo-header-text thirty-px-left">Hug </br>  Trees </br> Today</h1> -->
+  <h1> Connect to nature - literally. </h1>
+ <p>Give our trees the love they deserve and get to know our native species a little better</p>
 </div>
 
-<p>TreeHugger was created to encourage people to stop and take a closer look at the unique beauty of the native tree and plant species found in Aotearoa, New Zealand. <br>
-This app gamifies the identification of native species. Using geolocation via smartphone to provide the user with a list of different wildlife environments nearby and species that are likely to be found there, along with plant identification information and images. <br>
-Users can unlock achievement badges and real-world rewards for their efforts while also learning about and appreciating this incredible country.</p>
+<div id= "jumbo-steps" class="jumbotron text-center">
+  <!-- <h1 id="jumbo-header-text thirty-px-left">Hug </br>  Trees </br> Today</h1> -->
+ <p>Choose your forest type</p>
+<%= fa_icon "tree", class: "fa-4x" %>
+<p>Earn a badge by uploading a pic appreciating each tree</p>
+<%= fa_icon "camera-retro", class: "fa-4x" %>
+<p>Collect all the badges</p>
+<%= inline_svg("badge.svg",  class: 'tree-badge-svg-alone') %>
+<p>Win prizes!</p>
+<%= fa_icon "trophy", class: "fa-4x" %>
+</br>
+ <a class="btn btn-primary btn-lg ten-top-margin" href= <%= forest_types_dashboards_path %> role="button">Find Forests Now</a>
+</div>
 
 
 

@@ -14,4 +14,37 @@
  *= require imports
  */
 
- 
+
+
+ .landing-wrapper{
+  width:300px;
+ height:410px;
+
+ /* The magic centering code */
+ margin:auto;
+ position:absolute;
+ top:0;bottom:0; /* Aligns Vertically - Remove for Horizontal Only */
+ left:0;right:0; /* Aligns Horizontally - Remove for Vertical Only  */
+
+ /* Prevent div from overflowing main window */
+ max-width:100%;
+ max-height:100%;
+ overflow:auto;
+ text-align: center;
+ }
+
+ .landing-logo{
+  max-width:100%;
+  max-height:100%;
+ }
+
+ .form-center{
+  width:300px;
+  height:410px;
+  position:absolute;
+  margin:auto;
+  top:0;bottom:0;
+  left:0;right:0;
+  text-align: center;
+ }
+
