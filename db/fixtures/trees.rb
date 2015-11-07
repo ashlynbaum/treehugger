@@ -22,6 +22,7 @@ Tree.create do |s|
 Kahikatea is the largest tree native to Aotearoa with records from early settlers showing specimen of over 80m. Soot obtained from burning the heartwood supplied a pigment for tā moko. Since the wood does not impart an odour, and is clean and lightweight, Kahikatea was used to make boxes for the exporting of butter from the 1880s on."
 	s.images = "http://i.imgur.com/PSndidb.jpg"
 	s.forest_id = 3
+
 end
 
 Tree.create do |s|
@@ -41,3 +42,4 @@ Tree.create do |s|
 end
 
 # TODO make more seeds
+
