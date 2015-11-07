@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image: MyString
+  name: MyString
+  user_id: 
+  description: MyString
+  tree_id: 
+  coordinate: MyString
+
+two:
+  image: MyString
+  name: MyString
+  user_id: 
+  description: MyString
+  tree_id: 
+  coordinate: MyString
