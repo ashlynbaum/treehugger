@@ -25,7 +25,7 @@ class DashboardsController < ApplicationController
   def forest_types
     @forests = Forest.all
     @results = get_forest_types(params[:x], params[:y], params[:radius])
-    render action: "index"
+    render action: "search"
   end
 
   private
@@ -33,7 +33,7 @@ class DashboardsController < ApplicationController
   def get_forest_types(x,y,radius)
     x = 174.75878033265786 if x.nil? || x.empty?
     y = -41.29443668919478 if y.nil? || y.empty?
-    radius = 1000 if radius.nil? || radius.empty?
+    radius = 10 if radius.nil? || radius.empty?
     raw_json = HTTParty.get "http://api.lris.scinfo.org.nz/api/vectorQuery.json?key=3479c35b1848488e88fa424047c58641&layer=423&x=#{x}&y=#{y}&max_results=10&radius=#{radius}"
     parsed_json = JSON.parse(raw_json)
 

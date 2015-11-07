@@ -1,0 +1,21 @@
+<h2>Enter a location and a search radius</h2>
+<div id "jumbo-form" class="jumbotron">
+<a name="finder-form"></a>
+<%= form_tag('/dashboards/forest_types', method: "get") do %>
+    <%= text_field_tag('x', nil, { placeholder: "x coordinate" } ) %>
+    <%= text_field_tag('y', nil,  { placeholder: "y coordinate" } ) %>
+    <%= text_field_tag('radius', nil, {placeholder: "radius" }) %>
+    <%= submit_tag("Search") %>
+<% end %>
+</div>
+
+<% if @results.any? %>
+<h2>Forests in your Area</h2>
+<% end %>
+<% @results.each do |result| %>
+<!-- forest name links to forest type show page -->
+<% forest = Forest.find_by(name: result.forest_type_name) %>
+<p><%= link_to(result.forest_type_name, forest_path(forest)) %>
+<%= "forest within a radius of #{result.radius} meters"%></p>
+<% end %>
+
