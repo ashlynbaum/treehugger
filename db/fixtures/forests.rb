@@ -1,6 +1,6 @@
 Forest.create do |s|
 	s.id = 1
-	s.name = "Forest type 1"
+	s.name = "Podocarp"
 	s.description = "lorem ipsum delor"
 end
 
