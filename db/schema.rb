@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151107024110) do
+ActiveRecord::Schema.define(version: 20151107154842) do
 
   create_table "forest_badges", force: :cascade do |t|
     t.string   "name"
@@ -32,6 +32,18 @@ ActiveRecord::Schema.define(version: 20151107024110) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "images", force: :cascade do |t|
+    t.string   "source"
+    t.integer  "user_id"
+    t.integer  "tree_id"
+    t.boolean  "thumbnail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "images", ["tree_id"], name: "index_images_on_tree_id"
+  add_index "images", ["user_id"], name: "index_images_on_user_id"
+
   create_table "tree_badges", force: :cascade do |t|
     t.string   "image"
     t.string   "name"
@@ -49,7 +61,6 @@ ActiveRecord::Schema.define(version: 20151107024110) do
   create_table "trees", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.string   "images"
     t.integer  "forest_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

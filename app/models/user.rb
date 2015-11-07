@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
   has_many :forests, through: :forest_badges
   has_many :tree_badges
   has_many :trees, through: :tree_badges
+  has_many :images
 end
