@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  description: MyString
+  forest_type_id: 
+
+two:
+  user_id: 
+  description: MyString
+  forest_type_id: 

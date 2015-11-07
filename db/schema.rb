@@ -11,7 +11,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151107005808) do
+ActiveRecord::Schema.define(version: 20151107024110) do
+
+  create_table "forest_type_badges", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.string   "description"
+    t.integer  "forest_type_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "forest_type_badges", ["forest_type_id"], name: "index_forest_type_badges_on_forest_type_id"
+  add_index "forest_type_badges", ["user_id"], name: "index_forest_type_badges_on_user_id"
+
+  create_table "forest_types", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "tree_badges", force: :cascade do |t|
+    t.string   "image"
+    t.string   "name"
+    t.integer  "user_id"
+    t.string   "description"
+    t.integer  "tree_id"
+    t.string   "coordinate"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "tree_badges", ["tree_id"], name: "index_tree_badges_on_tree_id"
+  add_index "tree_badges", ["user_id"], name: "index_tree_badges_on_user_id"
+
+  create_table "trees", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "images"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
