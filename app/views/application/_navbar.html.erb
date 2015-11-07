@@ -21,7 +21,7 @@
        <ul class="nav navbar-nav navbar-right">
 
         <% if user_signed_in?%>
-          <li><a href="#">Badges <span class="badge">4</span></a></li>
+          <li><a href="/badges">Badges <span class="badge"><%= current_user.trees.count%></span></a></li>
           <li><%= link_to current_user.email, edit_user_registration_path %></li>
           <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
         <% else %>
