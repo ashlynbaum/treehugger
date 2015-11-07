@@ -20,6 +20,9 @@ class TreeBadgesController < ApplicationController
   def create
     @user = current_user
     @badge =TreeBadge.create({user_id: @user.id}.merge(badge_params))
+    respond_to do |format|
+      format.js {render inline: "location.reload();" }
+    end
   end
 
   private

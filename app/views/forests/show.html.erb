@@ -1,28 +1,7 @@
 <div class="forest-wrapper">
 	<h2><%= @forest.name %></h2>
 	<p><%= @forest.description %></p>
-	<div class="row">
-		<% @forest.trees.each do |tree| %>
-			<% if !TreeBadge.where(tree_id: tree.id, user_id: @user.id).any? %>
-				<div class="tree-tile"><img src="<%= tree.images %>" alt="">
-					<h3 class="text-center"><%= tree.name %></h3>
-					<div class="text-center collect-badge <%= tree.id %>">
-						<%= render partial: 'tree_badges/new', locals: {badge: TreeBadge.new, tree: tree, user: @user} %>
-					</div>
-				</div>
-			<% else %>
-				<div class="tree-tile">
-					<img src="<%=  @badges.find_by(tree_id: tree.id).image %>" alt="">
-					<h3 class="text-center"><%= tree.name %></h3>
-					<div class="text-center">
-						<%= inline_svg("badge.svg",  class: 'tree-badge-svg') %>
-					</div>
-					<div class="text-center">
-						<span class="badge-text text-success">Hugg'd</span>
-					</div>
-				</div>
-			<% end %>
-
-		<% end %>
+	<div id="forest-tree" class="row">
+		<%= render @trees %>
 	</div>
 </div>
