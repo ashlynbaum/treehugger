@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :trees
+
   resources :dashboards do
     collection do
       get :forest_types
