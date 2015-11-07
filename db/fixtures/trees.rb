@@ -1,6 +1,6 @@
 Tree.create do |s|
 	s.id = 1
-	s.name = "Manuka"
+	s.name = "Totara"
 	s.description = "lorem ipsum delor"
 	s.images = "http://placekitten.com/200/200"
 	s.forest_id = 1
@@ -8,7 +8,7 @@ end
 
 Tree.create do |s|
 	s.id = 2
-	s.name = "kanuka"
+	s.name = "Kahikatea"
 	s.description = "lorem ipsum delor"
 	s.images = "http://placekitten.com/200/200"
 	s.forest_id = 1
@@ -16,7 +16,7 @@ end
 
 Tree.create do |s|
 	s.id = 3
-	s.name = "Pine"
+	s.name = "Rimu"
 	s.description = "lorem ipsum delor"
 	s.images = "http://placekitten.com/200/200"
 	s.forest_id = 1
@@ -24,7 +24,7 @@ end
 
 Tree.create do |s|
 	s.id = 4
-	s.name = "Oak"
+	s.name = "Matai"
 	s.description = "lorem ipsum delor"
 	s.images = "http://placekitten.com/200/200"
 	s.forest_id = 2
