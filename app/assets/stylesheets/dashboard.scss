@@ -1,9 +1,18 @@
 #jumbo-header{
 /*background-color: #731E1E;*/
-background: url("/assets/hugging-tree.jpg") no-repeat center center;
-background-size:cover;
+// background: url("/assets/hugging-tree.jpg") no-repeat center center;
+// background-size:cover;
 }
 
+#jumbo-description{
+	margin: 0;
+	background: transparent;
+}
+
+#jumbo-steps{
+	padding-bottom: 8em;
+	background: url("/assets/whitey.png");
+}
 #jumbo-header-text{
 padding-left: 30px;
 }
@@ -19,10 +28,17 @@ padding-left: 30px;
     fill: #3c763d;
   }
 
-  .fa{
-    color: #3c763d;
-  }
+.fa{
+  color: #3c763d;
+}
 
-  .ten-top-margin{
-      margin-top: 10px;
-  }
+.ten-top-margin{
+  margin-top: 1.5em;
+  padding: .5em 3em;
+  font-size: 2em;
+}
+
+.search-form{
+	padding: 1em;
+	background: rgba(204, 204, 204, 0.52);
+}
