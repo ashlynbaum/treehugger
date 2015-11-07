@@ -5,7 +5,7 @@ FOREST_TYPES = {
     54 => 'Podocarp Giants',
     70 => 'Mangrove',
     68 => 'Deciduous Hardwood',
-    69 => 'Indigenous',
+    69 => 'Nothofagus Beech',
     71 => 'Exotic'
   }
 
