@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Treehugger</title>
+  <title>TreeHugger</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <%= render "navbar" %>
+  <% if !flash[:notice].blank? %>
+    <div class="alert alert-info"><%= notice %></div>
+  <% elsif !flash[:alert].blank? %>
+    <div class="alert alert-warning"><%= alert %></div>
+  <% end %>
+  <%= yield %>
 
 </body>
 </html>
