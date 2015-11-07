@@ -5,5 +5,13 @@
 	<% end %>
 </ul>
 
+<%= form_tag('/dashboards/forest_types', method: "get") do %>
+    <%= text_field_tag('x', nil, { placeholder: "x coordinate" } ) %>
+    <%= text_field_tag('y', nil,  { placeholder: "y coordinate" } ) %>
+    <%= text_field_tag('radius', nil, {placeholder: "radius" }) %>
+    <%= submit_tag("Search") %>
+<% end %>
 
-
+<% @results.each do |result| %>
+<p><%= "#{result.forest_type_name} within a radius of #{result.radius} meters"%></p>
+<% end %>

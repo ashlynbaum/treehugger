@@ -6,12 +6,17 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'dashboards#show'
   resources :dashboards
-  
+
   resources :forests do
     resources :trees do
     end
   end
 
+  resources :dashboards do
+    collection do
+      get :forest_types
+    end
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
