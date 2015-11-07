@@ -16,6 +16,6 @@
 <!-- forest name links to forest type show page -->
 <% forest = Forest.find_by(name: result.forest_type_name) %>
 <p><%= link_to(result.forest_type_name, forest_path(forest)) %>
-<%= "forest within a radius of #{result.radius} meters"%></p>
+<%= "species within a radius of #{result.radius} meters"%></p>
 <% end %>
 

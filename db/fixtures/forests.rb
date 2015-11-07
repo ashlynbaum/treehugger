@@ -36,7 +36,7 @@ end
 
 Forest.create do |s|
   s.id = 7
-  s.name = ForestTypesHelper::FOREST_TYPES[71]
+  s.name = "Fern"
   s.description = "lorem ipsum delor"
 end
 
