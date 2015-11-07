@@ -8,11 +8,30 @@ body{
 		margin: .5em;
 	}
 }
+html{
+	height: 100%;
+}
+body{
+	min-height: 100%;
+	position: relative;
+	padding-bottom:60px;   /* Height of the footer */
+}
 
+footer{
+	height: 60px;
+	background: url("/assets/debut_dark.png");
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
 
 h1.treehugger{
 	font-size: 10em;
 	font-family: "satisfy";
+}
+.logo-font{
+	font-family: "satisfy";
+	font-size: 1.5em;
 }
 .img-login{
   top: -20px;
