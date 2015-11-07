@@ -1,7 +1,9 @@
-<div>dashboard#index</div>
-<p>example paragraph</p>
 <ul>
 	<% @forests.each do |forest| %>
-		<li><%= link_to forest.name, forest_tree_path %></li>
+		<li><%= link_to forest.name, forest_trees_path(forest.id), remote: true %></li>
+		<div id="tree-items-<%= forest.id %>"></div>
 	<% end %>
 </ul>
+
+
+

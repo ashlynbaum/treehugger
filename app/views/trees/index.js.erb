@@ -1,0 +1,1 @@
+$("#tree-items-<%= @forest.id%>").html("<%= j render( @trees, locals: {forest: @forest}, remote: true ) %>")
