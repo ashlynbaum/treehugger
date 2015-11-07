@@ -6,6 +6,15 @@ class DashboardsController < ApplicationController
     end
   end
 
+  def landing
+    @disable_nav = true
+    if current_user
+      redirect_to dashboards_path
+    else
+      render action: "landing"
+    end
+  end
+
 	def index
 		@user = current_user
 		@forests = Forest.all
