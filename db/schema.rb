@@ -50,8 +50,9 @@ ActiveRecord::Schema.define(version: 20151107024110) do
     t.string   "name"
     t.text     "description"
     t.string   "images"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "forest_type_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "users", force: :cascade do |t|

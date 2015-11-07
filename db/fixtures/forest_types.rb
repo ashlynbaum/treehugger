@@ -7,7 +7,7 @@ end
 ForestType.create do |s|
 	s.id = 2
 	s.name = "Forest type 2"
-	s.description =
+	s.description = "lorem ipsum delor"
 end
 
 ForestType.create do |s|

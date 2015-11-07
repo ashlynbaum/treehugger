@@ -4,6 +4,7 @@ class CreateTrees < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.string :images
+      t.references :forest_type
 
       t.timestamps null: false
     end
