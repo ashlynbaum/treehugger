@@ -1,0 +1,10 @@
+<h2> <%= "#{@tree.name}" %> </h2>
+<h3>  part of the
+<%= link_to(@tree.forest.name, forest_path(@tree.forest)) %>
+forest
+</h3>
+
+<div class="tree-tile"><img src="<%= @tree.images %>" alt=""></div>
+<div><%= @tree.description %></div>
+
+<!-- if current user has a badge associated with that tree, display it -->
