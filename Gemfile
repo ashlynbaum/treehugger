@@ -35,6 +35,7 @@ gem 'devise', '3.5.2'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+	gem 'seed-fu', '~> 2.3' # add seed data
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
