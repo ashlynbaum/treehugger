@@ -1,7 +1,7 @@
 module ForestTypesHelper
 FOREST_TYPES = {
     50 =>'Fernland',
-    52 =>'Manuka and Kanaka',
+    52 =>'Manuka',
     54 => 'Podocarp Giants',
     70 => 'Mangrove',
     68 => 'Deciduous Hardwood',
