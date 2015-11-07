@@ -1,7 +1,11 @@
-<div class="landing-wrapper">
-  <h1>TreeHuggr</h1>
-  <p>Get to know our native species a little better.</p>
-  <img class="landing-logo" src="http://i.imgur.com/hHODVVY.png" alt="Tree Hugger Logo"/>
-  <a type="/users/sign_in" class="btn btn-default">Log In</a>
-  <a href="/users/sign_up" class="btn btn-default" >Sign Up</a>
-</div>
+<div class="forest-wrapper">
+	<div class="row">
+		<div class="col-md 6">
+			<h1>TreeHugger</h1>
+			<p>Get to know New Zealand's native species a little better.</p>
+			<img class="landing-logo" src="http://i.imgur.com/hHODVVY.png" alt="Tree Hugger Logo"/>
+			<%= link_to "Log In", new_user_session_path, class: "text-success user-links"%>
+			<%= link_to "Sign Up", new_user_registration_path, class: "text-success user-links" %>
+		</div>
+	</div>
+</div>	
