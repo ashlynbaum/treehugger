@@ -13,19 +13,19 @@
 
 ActiveRecord::Schema.define(version: 20151107024110) do
 
-  create_table "forest_type_badges", force: :cascade do |t|
+  create_table "forest_badges", force: :cascade do |t|
     t.string   "name"
     t.integer  "user_id"
     t.string   "description"
-    t.integer  "forest_type_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.integer  "forest_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  add_index "forest_type_badges", ["forest_type_id"], name: "index_forest_type_badges_on_forest_type_id"
-  add_index "forest_type_badges", ["user_id"], name: "index_forest_type_badges_on_user_id"
+  add_index "forest_badges", ["forest_id"], name: "index_forest_badges_on_forest_id"
+  add_index "forest_badges", ["user_id"], name: "index_forest_badges_on_user_id"
 
-  create_table "forest_types", force: :cascade do |t|
+  create_table "forests", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at",  null: false
@@ -50,9 +50,9 @@ ActiveRecord::Schema.define(version: 20151107024110) do
     t.string   "name"
     t.text     "description"
     t.string   "images"
-    t.integer  "forest_type_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.integer  "forest_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|

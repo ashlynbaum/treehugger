@@ -3,7 +3,7 @@ Tree.create do |s|
 	s.name = "Manuka"
 	s.description = "lorem ipsum delor"
 	s.images = "http://placekitten.com/200/200"
-	s.forest_type_id = 1
+	s.forest_id = 1
 end
 
 Tree.create do |s|
@@ -11,7 +11,7 @@ Tree.create do |s|
 	s.name = "kanuka"
 	s.description = "lorem ipsum delor"
 	s.images = "http://placekitten.com/200/200"
-	s.forest_type_id = 1
+	s.forest_id = 1
 end
 
 Tree.create do |s|
@@ -19,7 +19,7 @@ Tree.create do |s|
 	s.name = "Pine"
 	s.description = "lorem ipsum delor"
 	s.images = "http://placekitten.com/200/200"
-	s.forest_type_id = 1
+	s.forest_id = 1
 end
 
 Tree.create do |s|
@@ -27,5 +27,5 @@ Tree.create do |s|
 	s.name = "Oak"
 	s.description = "lorem ipsum delor"
 	s.images = "http://placekitten.com/200/200"
-	s.forest_type_id = 2
+	s.forest_id = 2
 end

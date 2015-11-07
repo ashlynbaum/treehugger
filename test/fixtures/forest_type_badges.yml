@@ -3,9 +3,9 @@
 one:
   user_id: 
   description: MyString
-  forest_type_id: 
+  forest_id: 
 
 two:
   user_id: 
   description: MyString
-  forest_type_id: 
+  forest_id: 

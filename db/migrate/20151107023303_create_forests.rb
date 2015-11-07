@@ -1,6 +1,6 @@
-class CreateForestTypes < ActiveRecord::Migration
+class CreateForests < ActiveRecord::Migration
   def change
-    create_table :forest_types do |t|
+    create_table :forests do |t|
       t.string :name
       t.text :description
 

@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   root 'dashboards#show'
   resources :dashboards
   
+  resources :forests do
+    resources :trees do
+    end
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

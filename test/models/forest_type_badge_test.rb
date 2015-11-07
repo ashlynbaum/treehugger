@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ForestTypeBadgeTest < ActiveSupport::TestCase
+class forestBadgeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
