@@ -10,7 +10,7 @@ body{
 }
 
 
-.landing h1{
+h1.treehugger{
 	font-size: 10em;
 	font-family: "satisfy";
 }
@@ -35,4 +35,16 @@ body{
  top:0;bottom:0;
  left:0;right:0;
  text-align: center;
+}
+
+.login-form{
+	.actions{
+		margin: 5px 0 10px;
+	}
+}
+
+.signup-form{
+	.actions{
+		margin: 15px 0 10px;
+	}
 }
