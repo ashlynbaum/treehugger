@@ -9,6 +9,7 @@ class DashboardsController < ApplicationController
 	def index
 		@user = current_user
 		@forests = Forest.all
+    @results = []
     render action: "index"
 	end
 

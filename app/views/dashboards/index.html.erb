@@ -1,3 +1,12 @@
+<h3> Be a tree hugger! </h3>
+
+<p> It's time to connect with nature - literally. <br>
+ Visit your local forests and learn about tree identification</p>
+
+<p> Find trees to hug in your area now: </p>
+
+
+
 <ul>
 	<% @forests.each do |forest| %>
 		<li><%= link_to forest.name, forest_trees_path(forest.id), remote: true %></li>
