@@ -1,0 +1,9 @@
+<h2><%= @forest.name %></h2>
+<div class="row">
+	<% @forest.trees.each do |tree| %>
+		<div class="col-md-2">
+			<div><%= tree.name %></div>
+			<div class="tree-tile"><img src="<%= tree.images %>" alt=""></div>
+		</div>
+	<% end %>
+</div>
