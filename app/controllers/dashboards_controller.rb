@@ -8,7 +8,11 @@ class DashboardsController < ApplicationController
 
   def landing
     @disable_nav = true
-    render action: "landing"
+    if current_user
+      redirect_to dashboards_path
+    else
+      render action: "landing"
+    end
   end
 
 	def index
