@@ -18,6 +18,7 @@ class TreeBadgesController < ApplicationController
   end
   
   def create
+    # TODO: update images to be stored in image table
     @user = current_user
     @badge =TreeBadge.create({user_id: @user.id}.merge(badge_params))
     respond_to do |format|

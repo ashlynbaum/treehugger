@@ -1,14 +1,16 @@
 <% if !TreeBadge.where(tree_id: tree.id, user_id: @user.id).any? %>
-	<div class="tree-tile"><img src="<%= tree.images %>" alt="">
-		<h3 class="text-center"><%= tree.name %></h3>
+	<div class="tree-tile"> 
+		<%= link_to image_tag(tree.images.first.source), tree_path(tree.id), target: "_blank" %>
+		<h3 class="text-center"><%=link_to tree.name, tree_path(tree.id), target: "_blank" %></h3>
 		<div class="text-center collect-badge <%= tree.id %>">
 			<%= render partial: 'tree_badges/new', locals: {badge: TreeBadge.new, tree: tree, user: @user} %>
 		</div>
 	</div>
 <% else %>
 	<div class="tree-tile">
+	<!-- TODO: reference images to be stored in image table -->
 		<img src="<%=  @badges.find_by(tree_id: tree.id).image %>" alt="">
-		<h3 class="text-center"><%= tree.name %></h3>
+		<h3 class="text-center"><%=link_to tree.name, tree_path(tree.id), target: "_blank"%></h3>
 		<div class="text-center">
 			<%= inline_svg("badge.svg",  class: 'tree-badge-svg') %>
 		</div>
