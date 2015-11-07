@@ -1,29 +1,27 @@
 body{
 	background-color: $white;
 }
-
-.user-links{
-	font-size: 2em;
-	margin: 0 1em;
+.login-links{
+	padding: .5em 2%;
+	.user-links{
+		font-size: 1.5em;
+		margin: .5em;
+	}
 }
 
-.landing-wrapper{
-//  width:300px;
-// height:410px;
 
-// /* The magic centering code */
-// margin:auto;
-// position:absolute;
-// top:0;bottom:0; /* Aligns Vertically - Remove for Horizontal Only */
-// left:0;right:0; /* Aligns Horizontally - Remove for Vertical Only  */
-
-// /* Prevent div from overflowing main window */
-// max-width:100%;
-// max-height:100%;
-// overflow:auto;
-// text-align: center;
+.landing h1{
+	font-size: 10em;
+	font-family: "satisfy";
 }
-
+.img-login{
+  top: -20px;
+  z-index: -10;
+  position: relative;
+}
+.forest-wrapper.landing{
+	margin-top: 2em;
+}
 .landing-logo{
  max-width:100%;
  max-height:100%;

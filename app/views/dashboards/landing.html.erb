@@ -1,11 +1,15 @@
-<div class="forest-wrapper">
+<div class="row">
+	<div class="pull-right login-links">
+	<%= link_to "Log In", new_user_session_path, class: "text-success user-links"%>
+	<%= link_to "Sign Up", new_user_registration_path, class: "text-success user-links" %>
+	</div>
+</div>
+<div class="forest-wrapper landing">
 	<div class="row">
-		<div class="col-md 6">
-			<h1>TreeHugger</h1>
-			<p>Get to know New Zealand's native species a little better.</p>
+		<div class="col-md 6 text-center">
+			<h1 class="text-success">TreeHugger</h1>
+			<h2>Get to know New Zealand's native species a little better.</h2>
 			<img class="landing-logo" src="http://i.imgur.com/hHODVVY.png" alt="Tree Hugger Logo"/>
-			<%= link_to "Log In", new_user_session_path, class: "text-success user-links"%>
-			<%= link_to "Sign Up", new_user_registration_path, class: "text-success user-links" %>
 		</div>
 	</div>
 </div>	
