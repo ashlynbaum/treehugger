@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'dashboards#show'
 
+  resources :badges
   resources :forests do
     resources :trees do
     end
