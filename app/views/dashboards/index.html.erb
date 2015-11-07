@@ -1,21 +1,23 @@
-<h3> Be a tree hugger! </h3>
-
-<p> It's time to connect with nature - literally. <br>
- Visit your local forests and learn about tree identification</p>
-
-<p> Find trees to hug in your area now: </p>
-
-<%= form_tag('/dashboards/forest_types', method: "get") do %>
-    <%= text_field_tag('x', nil, { placeholder: "x coordinate" } ) %>
-    <%= text_field_tag('y', nil,  { placeholder: "y coordinate" } ) %>
-    <%= text_field_tag('radius', nil, {placeholder: "radius" }) %>
-    <%= submit_tag("Search") %>
-<% end %>
 
 
-<% @results.each do |result| %>
-<!-- forest name links to forest type show page -->
-<% forest = Forest.find_by(name: result.forest_type_name) %>
-<p><%= link_to(result.forest_type_name, forest_path(forest)) %>
-<%= "forest within a radius of #{result.radius} meters"%></p>
+
+
+
+<% if user_signed_in?%>
+
+
+
+<div id= "jumbo-description" class="jumbotron">
+  <h1 id="jumbo-header-text thirty-px-left">Hug </br>  Trees </br> Today</h1>
+  <p> It's time to connect with nature - literally. <br>
+ Get to know our native species a little better.</p>
+ <a class="btn btn-primary btn-lg" href= <%= forest_types_dashboards_path %> role="button">Find Forests Now</a>
+</div>
+
+<p>TreeHugger was created to encourage people to stop and take a closer look at the unique beauty of the native tree and plant species found in Aotearoa, New Zealand. <br>
+This app gamifies the identification of native species. Using geolocation via smartphone to provide the user with a list of different wildlife environments nearby and species that are likely to be found there, along with plant identification information and images. <br>
+Users can unlock achievement badges and real-world rewards for their efforts while also learning about and appreciating this incredible country.</p>
+
+
+
 <% end %>
