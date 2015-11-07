@@ -1,4 +1,4 @@
-class BadgesController < ApplicationController
+class TreeBadgesController < ApplicationController
   def index
     @user = current_user
     all_user_badges = TreeBadge.where(user_id: User.first) #TODO should be @user.id
@@ -15,5 +15,15 @@ class BadgesController < ApplicationController
 
   def new
   	@badge = TreeBadge.new
+  end
+  
+  def create
+    @user = current_user
+    @badge =TreeBadge.create({user_id: @user.id}.merge(badge_params))
+  end
+
+  private
+  def badge_params
+    params.require(:tree_badge).permit(:tree_id, :image)
   end
 end

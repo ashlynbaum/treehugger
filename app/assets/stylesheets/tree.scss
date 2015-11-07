@@ -1,5 +1,5 @@
 .forest-wrapper{
-	margin: 0 5%;
+	margin: 4em 10%;
 	.tree-tile{
 		width: 200px;
 		height: 200px;
@@ -20,6 +20,14 @@
 		.actions, .field{
 			margin: 1em auto;
 		}
+	}
+	.tree-badge-svg{
+		width: 100px;
+		height: 100px;
+		fill: #3c763d;
+	}
+	.badge-text{
+		font-size: 2em;
 	}
 }
 
