@@ -5,15 +5,6 @@
 
 <p> Find trees to hug in your area now: </p>
 
-
-
-<ul>
-	<% @forests.each do |forest| %>
-		<li><%= link_to forest.name, forest_trees_path(forest.id), remote: true %></li>
-		<div id="tree-items-<%= forest.id %>"></div>
-	<% end %>
-</ul>
-
 <%= form_tag('/dashboards/forest_types', method: "get") do %>
     <%= text_field_tag('x', nil, { placeholder: "x coordinate" } ) %>
     <%= text_field_tag('y', nil,  { placeholder: "y coordinate" } ) %>
@@ -21,6 +12,10 @@
     <%= submit_tag("Search") %>
 <% end %>
 
+
 <% @results.each do |result| %>
-<p><%= "#{result.forest_type_name} within a radius of #{result.radius} meters"%></p>
+<!-- forest name links to forest type show page -->
+<% forest = Forest.find_by(name: result.forest_type_name) %>
+<p><%= link_to(result.forest_type_name, forest_path(forest)) %>
+<%= "forest within a radius of #{result.radius} meters"%></p>
 <% end %>
