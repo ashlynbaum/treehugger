@@ -16,5 +16,10 @@
 		justify-content: center;
 		flex-wrap: wrap;
 	}
+	.collect-badge{
+		.actions, .field{
+			margin: 1em auto;
+		}
+	}
 }
 
