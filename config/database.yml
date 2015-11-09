@@ -1,23 +1,16 @@
 development:
   adapter: postgresql
-  encoding: utf8
-  database: treehugger_dev 
+  database: my_database_development
   pool: 5
-  username: 
-  password:
-
-test: &TEST
+  timeout: 5000
+test:
   adapter: postgresql
-  encoding: utf8
-  database: treehugger_test
+  database: my_database_test
   pool: 5
-  username: 
-  password:
+  timeout: 5000
 
 production:
   adapter: postgresql
-  encoding: utf8
-  database: treehugger_prod
+  database: my_database_production
   pool: 5
-  username: 
-  password:
+  timeout: 5000
