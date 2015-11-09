@@ -28,6 +28,9 @@ gem 'httparty'
 gem "font-awesome-rails"
 gem 'inline_svg'
 
+
+gem 'rails_12factor', group: :production
+gem 'puma'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
