@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20151107154842) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "forest_badges", force: :cascade do |t|
     t.string   "name"
     t.integer  "user_id"
@@ -22,8 +25,8 @@ ActiveRecord::Schema.define(version: 20151107154842) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "forest_badges", ["forest_id"], name: "index_forest_badges_on_forest_id"
-  add_index "forest_badges", ["user_id"], name: "index_forest_badges_on_user_id"
+  add_index "forest_badges", ["forest_id"], name: "index_forest_badges_on_forest_id", using: :btree
+  add_index "forest_badges", ["user_id"], name: "index_forest_badges_on_user_id", using: :btree
 
   create_table "forests", force: :cascade do |t|
     t.string   "name"
@@ -41,8 +44,8 @@ ActiveRecord::Schema.define(version: 20151107154842) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "images", ["tree_id"], name: "index_images_on_tree_id"
-  add_index "images", ["user_id"], name: "index_images_on_user_id"
+  add_index "images", ["tree_id"], name: "index_images_on_tree_id", using: :btree
+  add_index "images", ["user_id"], name: "index_images_on_user_id", using: :btree
 
   create_table "tree_badges", force: :cascade do |t|
     t.string   "image"
@@ -55,8 +58,8 @@ ActiveRecord::Schema.define(version: 20151107154842) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "tree_badges", ["tree_id"], name: "index_tree_badges_on_tree_id"
-  add_index "tree_badges", ["user_id"], name: "index_tree_badges_on_user_id"
+  add_index "tree_badges", ["tree_id"], name: "index_tree_badges_on_tree_id", using: :btree
+  add_index "tree_badges", ["user_id"], name: "index_tree_badges_on_user_id", using: :btree
 
   create_table "trees", force: :cascade do |t|
     t.string   "name"
@@ -81,7 +84,13 @@ ActiveRecord::Schema.define(version: 20151107154842) do
     t.datetime "updated_at",                          null: false
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "forest_badges", "forests"
+  add_foreign_key "forest_badges", "users"
+  add_foreign_key "images", "trees"
+  add_foreign_key "images", "users"
+  add_foreign_key "tree_badges", "trees"
+  add_foreign_key "tree_badges", "users"
 end
