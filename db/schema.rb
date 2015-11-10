@@ -44,9 +44,6 @@ ActiveRecord::Schema.define(version: 20151107154842) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "images", ["tree_id"], name: "index_images_on_tree_id", using: :btree
-  add_index "images", ["user_id"], name: "index_images_on_user_id", using: :btree
-
   create_table "tree_badges", force: :cascade do |t|
     t.string   "image"
     t.string   "name"
@@ -89,8 +86,6 @@ ActiveRecord::Schema.define(version: 20151107154842) do
 
   add_foreign_key "forest_badges", "forests"
   add_foreign_key "forest_badges", "users"
-  add_foreign_key "images", "trees"
-  add_foreign_key "images", "users"
   add_foreign_key "tree_badges", "trees"
   add_foreign_key "tree_badges", "users"
 end
