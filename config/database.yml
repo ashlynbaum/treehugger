@@ -12,3 +12,5 @@ test:
 production:
   adapter: postgresql
   database: treehugger_prod
+	username: <%= ENV["PG_USERNAME"] %>
+	password: <%= ENV["PG_PASSWORD"] %>
