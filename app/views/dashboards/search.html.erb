@@ -3,11 +3,13 @@
 	<div id "jumbo-form" class="search-form">
 	<a name="finder-form"></a>
 	<%= form_tag('/dashboards/forest_types', method: "get") do %>
-	    <%= text_field_tag('x', nil, { placeholder: "x coordinate" } ) %>
-	    <%= text_field_tag('y', nil,  { placeholder: "y coordinate" } ) %>
-	    <%= text_field_tag('radius', nil, {placeholder: "radius" }) %>
+	    <%= text_field_tag('x', nil, { placeholder: "Latitude (deg)" } ) %>
+	    <%= text_field_tag('y', nil,  { placeholder: "Longitude (deg)" } ) %>
+	    <%= text_field_tag('radius', nil, {placeholder: "radius (km)" }) %>
 	    <%= submit_tag("Search", class: "btn btn-success") %>
 	<% end %>
+	<p>Please enter a radius in kilometres to search for forests in your area. example: '50' or '1000'</p>
+	<p>Coordinates will default to Zealandia if no latitude and longitude are entered. Zealandia: (-41.29443668919478, 174.75878033265786). </p>
 	</div>
 
 <% if @results.any? %>
