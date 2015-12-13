@@ -3,8 +3,8 @@
 	<div id "jumbo-form" class="search-form">
 	<a name="finder-form"></a>
 	<%= form_tag('/dashboards/forest_types', method: "get") do %>
-	    <%= text_field_tag('x', nil, { placeholder: "Latitude (deg)" } ) %>
-	    <%= text_field_tag('y', nil,  { placeholder: "Longitude (deg)" } ) %>
+	    <%= text_field_tag('y', nil, { placeholder: "Latitude (deg)" } ) %>
+	    <%= text_field_tag('x', nil,  { placeholder: "Longitude (deg)" } ) %>
 	    <%= text_field_tag('radius', nil, {placeholder: "radius (km)" }) %>
 	    <%= submit_tag("Search", class: "btn btn-success") %>
 	<% end %>
